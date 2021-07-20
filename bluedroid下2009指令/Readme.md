@@ -17,7 +17,7 @@ manufacturer data
 这个框架只是为了熟悉android bluetooth而已
 
 ```
-![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/char.png)
+![image](./char.png)
 
 ```
 整个bluedroid可以分为两大模块：BTIF，BTE
@@ -35,16 +35,16 @@ HCI：读取或写入数据到蓝牙hw
 第二步是BTA找到bta dm action(将btm的函数聚集起来)，发现这里有功能函数枚举，这里是BTA接口
 bluedroid的第二层是BTA,这部分的接口是dm action，封装第一层。
 ```
-![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/2.png)
+![image](./2.png)
 ```
 第三步是通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd，
 通过send message的异步方式去调用接口
 bluedroid的第三层是BTIF,这部分是调用BTA的是dm action，
 封装第二层，没有明显的封装，就是普通调用，BTIF是给JNI接口的
 ```
-![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/3.png)
+![image](./3.png)
 ```
 第四步封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
 ```
-![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/4.png)
+![image](./4.png)
 
