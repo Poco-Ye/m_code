@@ -39,6 +39,8 @@ bluedroid的第二层是BTA,这部分的接口是dm action，封装第一层。
 ```
 第三步是通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd，
 通过send message的异步方式去调用接口
+bluedroid的第三层是BTIF,这部分是调用BTA的是dm action，
+封装第二层，没有明显的封装，就是普通调用，BTIF是给JNI接口的
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/3.png)
 ```
