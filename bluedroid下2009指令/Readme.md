@@ -18,11 +18,21 @@ manufacturer data
 
 
 ```
+```
+第一步是2009指令的函数回溯
+```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/1.png)
+```
+第二步是通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd
+bluedroid的第一层是BTM,这部分的接口是dm action，封装第一层。通过send message的异步方式去调用接口
+```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/2.png)
 ```
-是通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd
+第三步
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/3.png)
+```
+第四步
+```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/4.png)
 
