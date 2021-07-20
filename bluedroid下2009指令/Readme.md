@@ -30,7 +30,7 @@ HCI：读取或写入数据到蓝牙hw
 
 第一步是第一层BTM 2009指令的函数回溯，最底层就是BTM将HCI指令封装起来
 ```
-![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/1.png)
+![image](./1.png)
 ```
 第二步是BTA找到bta dm action(将btm的函数聚集起来)，发现这里有功能函数枚举，这里是BTA接口
 bluedroid的第二层是BTA,这部分的接口是dm action，封装第一层。
