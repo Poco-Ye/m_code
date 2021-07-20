@@ -1,5 +1,5 @@
 ```
 博通的PCM配置可以改，RTK在config上面设置不在code上
 ```
-![image](博通PCM配置.png)
-![image](QQ截图20210716093954.png)
+![image](./%E5%8D%9A%E9%80%9APCM%E9%85%8D%E7%BD%AE.png)
+
