@@ -16,8 +16,9 @@ manufacturer data
 
 这个框架只是为了熟悉android bluetooth而已
 
-
 ```
+![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/char.png)
+
 ```
 整个bluedroid可以分为两大模块：BTIF，BTE
 BTIF：提供bluedroid对外的接口
