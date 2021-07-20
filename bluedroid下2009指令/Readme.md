@@ -19,12 +19,20 @@ manufacturer data
 
 ```
 ```
+整个bluedroid可以分为两大模块：BTIF，BTE
+BTIF：提供bluedroid对外的接口
+BTE：bluedroid的内部处理，又细分为BTA，BTU，BTM和HCI
+BTA：bluedroid中各profile的逻辑实现和处理
+BTU：承接BTA与HCI
+BTM：蓝牙配对与链路管理
+HCI：读取或写入数据到蓝牙hw
+
 第一步是2009指令的函数回溯
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/1.png)
 ```
-第二步是找到btm action，发现这里有功能函数枚举，这里是BTM接口
-bluedroid的第一层是BTM,这部分的接口是dm action，封装第一层。
+第二步是找到bta action，发现这里有功能函数枚举，这里是BTA接口
+bluedroid的第一层是BTA,这部分的接口是dm action，封装第一层。
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/2.png)
 ```
