@@ -15,4 +15,4 @@ gradle根据上面配的去下载生成.gradle 看图中配置的是4.4
 一般的解决方法都是降jdk版本，直接下载安装再从新选路径，.idea的misc.xml会更改jdk版本
 
 ```
-![image](./android studio版本问题.png)
+![android studio版本问题](./android studio版本问题.png)
