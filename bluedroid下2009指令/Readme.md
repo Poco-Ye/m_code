@@ -44,7 +44,7 @@ bluedroid的第三层是BTIF,这部分是调用BTA的是dm action，
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/3.png)
 ```
-第四步
+第四步封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
 ```
 ![image](https://github.com/Poco-Ye/m_code/blob/master/bluedroid%E4%B8%8B2009%E6%8C%87%E4%BB%A4/4.png)
 
