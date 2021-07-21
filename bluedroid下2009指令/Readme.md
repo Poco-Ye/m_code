@@ -1,4 +1,4 @@
-##le scan rsp
+## le scan rsp
 ```
 le scan rsp 是用来回对端信息的
 
@@ -29,23 +29,23 @@ BTU：承接BTA与HCI
 BTM：蓝牙配对与链路管理
 HCI：读取或写入数据到蓝牙hw
 
-##第一步：第一层BTM 2009指令的函数回溯，最底层就是BTM将HCI指令封装起来
+## 第一步：第一层BTM 2009指令的函数回溯，最底层就是BTM将HCI指令封装起来
 ```
 ![image](./1.png)
 ```
-##第二步：BTA找到bta dm action(将btm的函数聚集起来)，发现这里有功能函数枚举，这里是BTA接口
+## 第二步：BTA找到bta dm action(将btm的函数聚集起来)，发现这里有功能函数枚举，这里是BTA接口
 bluedroid的第二层是BTA,这部分的接口是dm action，封装第一层。
 ```
 ![image](./2.png)
 ```
-##第三步：通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd，
+## 第三步：通过event来选择跑哪个cmd，枚举cmd，枚举event，对应起来，然后用event调用对应的cmd，
 通过send message的异步方式去调用接口
 bluedroid的第三层是BTIF,这部分是调用BTA的是dm action，
 封装第二层，没有明显的封装，就是普通调用，BTIF是给JNI接口的
 ```
 ![image](./3.png)
 ```
-##第四步封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
+## 第四步封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
 ```
 ![image](./4.png)
 
