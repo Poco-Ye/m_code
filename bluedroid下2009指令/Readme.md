@@ -41,10 +41,10 @@ HCI：读取或写入数据到蓝牙hw
 
 ![image](./3.png)
 
-## 第四步封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
+## 第四步：封装BTIF到btgatt_client_interface_t，建立gatt interface，提供给JNI gatt.cpp调用
 
 ![image](./4.png)
-## 第五步JNI调hardware 从上调下 #define BT_HARDWARE_MODULE_ID "bluetooth"，JNI是直接dlopen打开hardware层hw_module_t xxx.so的代码位置，通过ELF文件的代码位置拿到接口，拿到接口之后就比对ID，ID的比对在hw_get_module函数上面，然后拿到接口可直接调用
+## 第五步：JNI调hardware，【从上调下】 #define BT_HARDWARE_MODULE_ID "bluetooth"，JNI是直接dlopen打开hardware层hw_module_t xxx.so的代码位置，通过ELF文件的代码位置拿到接口，拿到接口之后就比对ID，ID的比对在hw_get_module函数上面，然后拿到接口可直接调用
 
 ![image](./5.png)
 
