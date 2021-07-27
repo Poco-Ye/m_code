@@ -48,6 +48,7 @@ HCI：读取或写入数据到蓝牙hw
 
 ![image](./5.png)
 
+## 第六步: JNI的initializeNative拿到hardware gatt的句柄还有将gatt callback的句柄传到下面去，这个回调函数有两个特点，一是被动性，二是异步。上层下一个cmd下去，event上来的时候就要用回调函数，因为是被动的，还有时间不定是异步的，回调上传event带的data再通过sendMessage的方式通知到上层
 ![image](./6.png)
 
 
