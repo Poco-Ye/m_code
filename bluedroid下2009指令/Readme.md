@@ -53,6 +53,8 @@ HCI：读取或写入数据到蓝牙hw
 
 ![image](./7.png)
 
+![image](./8.png)
+
 
 
 
