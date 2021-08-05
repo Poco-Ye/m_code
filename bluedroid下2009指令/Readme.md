@@ -49,8 +49,8 @@ JNI的Native我们有框图分析，就是注册到AMS后台的，先注册到Ad
 ![image](./8.png)
 
 ## 第八步
-![image](./12.png)
 ![image](./11.png)
+![image](./12.png)
 ![image](./9.png)
 ![image](./10.png)
 
