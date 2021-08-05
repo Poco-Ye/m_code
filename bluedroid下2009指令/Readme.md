@@ -43,14 +43,15 @@ BTA找到bta dm action(将btm的函数聚集起来)，发现这里有功能函�
 JNI的initializeNative拿到hardware gatt的句柄还有将gatt callback的句柄传到下面去，这个回调函数有两个特点，一是被动性，二是异步。上层下一个cmd下去，event上来的时候就要用回调函数，因为是被动的，还有时间不定是异步的，回调上传event带的data再通过sendMessage的方式通知到上层
 ![image](./6.png)
 
-## 第七步：JNI接口通过路径方式注册到上层
+## 第七步：JNI接口通过路径方式注册到上层，注册到AMS后台，framework前端只能通过aidl的asInterface方式调用
 JNI的Native我们有框图分析，就是注册到AMS后台的，先注册到AdvertiseManager.java最后注册到GattServce.java这个上面，并不是注册到framework，而且framework就是一个前端，这个时候可以类比一下bluez上的dbus框架，proxy add就是AMS加载蓝牙各个profile service的时候，proxy remove就是释放service，org.bluez.xxx的接口就是类似于framework aidl，只有proxy add（蓝牙service注册之后） ，framework才能binder上这个接口，所以app端调用aidl的开发就是前端开发，C/S的框架，当然很多时候也会改到AMS的部分，比如蓝牙wifi的state machine，proxy/aidl 就是一个接口，不管是C/S框架中 S(服务端)部分的哪一块肉，反正就是open/asInterface开来给C(客户端)用的，而且这个接口不是一直都有的，注册了才会有，remove了就没有了，之所以叫proxy也是因为它的动态性。
 ![image](./7.png)
-
 ![image](./8.png)
 
+## 第八步
+![image](./12.png)
+![image](./11.png)
 ![image](./9.png)
-
 ![image](./10.png)
 
 
