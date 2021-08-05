@@ -48,11 +48,12 @@ JNI的Native我们有框图分析，就是注册到AMS后台的，先注册到Ad
 ![image](./7.png)
 ![image](./8.png)
 
-## 第八步
+## 第八步 蓝牙AMS后台启动
+C/S框架，蓝牙的各个profile service后台需要实体化跑起来，然后framework前端才能通过aidl bind的方式去调用。
 ![image](./11.png)
 ![image](./12.png)
-![image](./9.png)
 ![image](./10.png)
+![image](./9.png)
 
 
 
