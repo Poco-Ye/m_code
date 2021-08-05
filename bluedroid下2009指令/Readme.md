@@ -1,26 +1,15 @@
-## le scan rsp
-```
+## 2009指令
 le scan rsp 是用来回对端信息的
-
 le这种东西，直接用nrf connect应用来解说
-
 下拉扫描直接把所有广播都读进来，然后发scan req过去，收到对端的scan rsp之后
-
 就可以解释出蓝牙广播名称，功率，还可以带uuid，
 complete local name
 tx power
 uuid 
 manufacturer data
-
 所以目前设置的2009是给对端nrf connect扫描的
-
-
 这个框架只是为了熟悉android bluetooth而已
-
-```
-![image](./char.png)
-
-```
+## anroid蓝牙框架
 整个bluedroid可以分为两大模块：BTIF，BTE
 BTIF：提供bluedroid对外的接口
 BTE：bluedroid的内部处理，又细分为BTA，BTU，BTM和HCI
@@ -28,7 +17,8 @@ BTA：bluedroid中各profile的逻辑实现和处理
 BTU：承接BTA与HCI
 BTM：蓝牙配对与链路管理
 HCI：读取或写入数据到蓝牙hw
-```
+![image](./char.png)
+
 ## 第一步：2009指令封装
 第一层BTM 2009指令的函数回溯,最底层就是BTM将HCI指令封装起来
 ![image](./1.png)
