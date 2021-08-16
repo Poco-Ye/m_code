@@ -1,4 +1,13 @@
 ```
+就是gradle的版本选择会比较麻烦，安装在用户目录比如插件选7.0.0 工具选7.0.2，这个版本需要匹配，jdk和sdk api比较好理解，
+而且经常自己下载安装或者用sdk manager安装，gradle没有安装过
+
+gradle的安装直接在android studio上选择更新安装，有了这四个东西就可以编译
+version 有两个 一个是插件的 一个工具的
+/c/Users/Administrator/.gradle/caches/jars-8/282efb23b4268a4d244ba955399ddc87/gradle-7.0.0.jar
+/c/Users/Administrator/.gradle/wrapper/dists/gradle-7.0.2-bin/857tjihv64xamwrf0h14cai3r/gradle-7.0.2/bin
+```
+```
 不喜欢用ui的工具，很多android 的应用因为图中的各种工具版本不匹配然后编译不过
 
 gradle version
