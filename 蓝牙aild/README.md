@@ -130,7 +130,7 @@ public class MyService extends Service {
 }
 
 ```
-## android framework bind service aind
+## android framework bind service aidl
 BluetoothManagerService.java
 framework==>aidl==>JNI==>BTIF==>BTM
 ![image](./3.png)
